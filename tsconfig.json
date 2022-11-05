@@ -1,17 +1,23 @@
 {
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": ["ESNext", "DOM"],
+    "module": "ESNext",
     "moduleResolution": "Node",
-    "target": "ES2015",
+    "jsx": "preserve",
+    "target": "ESNext",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "useDefineForClassFields": true,
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["src"]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }
