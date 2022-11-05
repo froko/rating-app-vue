@@ -1,24 +1,11 @@
-import { allProducts } from './product.model';
-import { RatingApp } from './rating-app';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+import { createApp } from 'vue';
+
 import './style.css';
+import App from './App.vue';
 
-let ratingApp = new RatingApp(allProducts);
+library.add(faStar);
 
-const appElement = document.querySelector('#app');
-appElement?.appendChild(ratingApp.asHtmlElement);
-
-const handleRatingClick = (e: MouseEvent) => {
-  const target = e.target as HTMLElement;
-  if (target.classList.contains('action')) {
-    const product = target.getAttribute('product');
-    const rating = target.getAttribute('rating');
-
-    if (product && rating && appElement) {
-      ratingApp = ratingApp.update(product, +rating);
-      appElement.innerHTML = '';
-      appElement.appendChild(ratingApp.asHtmlElement);
-    }
-  }
-};
-
-document.body.addEventListener('click', handleRatingClick);
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app');

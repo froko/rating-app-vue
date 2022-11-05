@@ -9,10 +9,10 @@ export interface Product {
 export const allProducts: Product[] = [
   { id: 'vite', title: 'Vite', url: 'https://vitejs.dev/', description: 'Next Generation Frontend Tooling', rating: 3 },
   {
-    id: 'typescript',
-    title: 'TypeScript',
-    url: 'https://www.typescriptlang.org/',
-    description: 'JavaScript with syntax for types',
+    id: 'vue',
+    title: 'Vue.js',
+    url: 'https://vuejs.org/',
+    description: 'The Progressive JavaScript Framework',
     rating: 3
   }
 ];
