@@ -31,7 +31,7 @@ const handleStarClick = () => {
 
 <style>
 .icon {
-  margin: 0.5rem;
+  margin: 0.25rem;
 }
 
 .checked {

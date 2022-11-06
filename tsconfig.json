@@ -9,7 +9,6 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
     "noEmit": true,
     "noFallthroughCasesInSwitch": true,
     "noUnusedLocals": true,
@@ -18,6 +17,6 @@
     "skipLibCheck": true,
     "strict": true
   },
-  "include": ["src"],
+  "include": ["src", "cypress/support"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
