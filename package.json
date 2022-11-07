@@ -7,9 +7,14 @@
     "start": "vite --port 3000",
     "build": "vue-tsc && vite build",
     "preview": "vite preview --port 3000",
-    "prepare": "npx --yes husky install"
+    "prepare": "npx --yes husky install",
+    "playwright": "playwright test",
+    "playwright:ct": "playwright test -c playwright-ct.config.ts",
+    "playwright:report": "playwright show-report"
   },
   "devDependencies": {
+    "@playwright/experimental-ct-vue": "^1.27.1",
+    "@playwright/test": "^1.27.1",
     "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.36.2",
     "@vitejs/plugin-vue": "^3.2.0",
